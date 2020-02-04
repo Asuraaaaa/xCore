@@ -1,17 +1,18 @@
 ﻿using CitizenFX.Core;
 
-namespace xCoreClient.main.Job
+namespace xCoreServer.Job
 {
     class PlayerJob : BaseScript
     {
         private string jobName_;
         private string jobGrade_;
 
-        public void setPlayerJob(string job,string grade)
+        public void setPlayerJob(int source,string job,string grade)
         {
+            Player player = new PlayerList()[source];
             this.jobName_ = job;
             this.jobGrade_ = grade;
-            TriggerEvent("xCore:client:setJob", job, grade);
+            player.TriggerEvent("xCore:client:setJob", job, grade);
         }
 
         public string getJobGrade() => this.jobGrade_;

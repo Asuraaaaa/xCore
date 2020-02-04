@@ -5,8 +5,7 @@ namespace xCoreClient.events
     {
         public static void playerJobLoaded(string name,string grade)
         {
-            ClientMain.playerJob.setPlayerJob(name, grade);
-            TriggerEvent("xCore:client:jobLoaded", name, grade);
+            Debug.WriteLine($"Načetl jsem tě! Prace: {name}:{grade}");
         }
     }
 }

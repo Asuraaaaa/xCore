@@ -48,6 +48,8 @@
     <Compile Include="Main.cs" />
     <Compile Include="Main\events\default\playerConnect.cs" />
     <Compile Include="Main\events\LoadJob.cs" />
+    <Compile Include="Main\Job\PlayerJob.cs" />
+    <Compile Include="Main\Job\PlayerJobHolder.cs" />
     <Compile Include="Main\Mysql\MYSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

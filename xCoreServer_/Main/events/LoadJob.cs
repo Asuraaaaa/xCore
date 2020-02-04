@@ -1,5 +1,6 @@
 ﻿using CitizenFX.Core;
 using System.Collections.Generic;
+using xCoreServer.Job;
 
 namespace xCoreServer.JobInit
 {
@@ -19,12 +20,17 @@ namespace xCoreServer.JobInit
                 {
                     MYSQL.execute($"INSERT INTO playerjob (name,grade,steamid) VALUES ('{job}','{grade}','{licenseIdentifier}');");
                     Debug.WriteLine("Zapisuju nového hráče do tabulky 'PlayerJob'");
-                    player.TriggerEvent("xCore:client:LoadJob", job, grade);
                 }
                 else
                 {
-                    player.TriggerEvent("xCore:client:LoadJob", list[0].name, list[0].grade);
+                    job = list[0].name;
+                    grade = list[0].grade;
                 }
+
+                player.TriggerEvent("xCore:client:LoadJob", job, grade);
+                PlayerJob pJob = new PlayerJob();
+                pJob.setPlayerJob(source, job, grade);
+                PlayerJobHolder.savePlayerToList(source, pJob);
             });           
         }
     }

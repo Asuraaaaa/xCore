@@ -49,7 +49,6 @@
     <Compile Include="Main\events\PlayerJobLoaded.cs" />
     <Compile Include="Main\events\playerPushKey.cs" />
     <Compile Include="Main\events\default\playerSpawn.cs" />
-    <Compile Include="Main\Job\PlayerJob.cs" />
     <Compile Include="Main\events\KeyEvent.cs" />
     <Compile Include="Main\Player\ID.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
