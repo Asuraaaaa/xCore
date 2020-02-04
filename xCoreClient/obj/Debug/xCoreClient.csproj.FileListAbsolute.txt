@@ -1,0 +1,6 @@
+D:\PrisonFivem\cfxResource\resources\xCore\xCoreClient.net.dll
+D:\PrisonFivem\cfxResource\resources\xCore\xCoreClient.net.pdb
+C:\Users\xogos\source\repos\xCore\xCoreClient\obj\Debug\xCoreClient.csproj.CoreCompileInputs.cache
+C:\Users\xogos\source\repos\xCore\xCoreClient\obj\Debug\xCoreClient.net.dll
+C:\Users\xogos\source\repos\xCore\xCoreClient\obj\Debug\xCoreClient.net.pdb
+C:\Users\xogos\source\repos\xCore\xCoreClient\obj\Debug\xCoreClient.csprojAssemblyReference.cache
