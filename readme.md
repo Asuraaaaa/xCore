@@ -4,16 +4,18 @@ xCore is simple FiveM library
 
 ### PlayerJob functions and Events
 
-1. Functions (server side)
+**1. Functions (server side)**
    - setPlayerJob(int id,string job,string grade)
    - getJobGrade(int id) returns player Job Grade
    - getJobName(int id)  returns player Job Name
-2. Events (client side)
+   
+**2. Events (client side)**
    - xCore:client:setJob: (Will call whenever player jobs got updated)
       - Parameters: string job,string grade
    - xCore:client:jobLoaded: (Will call when player spawn in game)
       - Parameters: string job,string grade
-3. Events (server)
+      
+**3. Events (server)**
    - xCore:Server:setJob: (Will set player job)
       - Parameters: int id,string job,string grade      
 
