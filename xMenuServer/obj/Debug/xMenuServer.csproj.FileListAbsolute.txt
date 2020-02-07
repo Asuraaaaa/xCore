@@ -1,0 +1,6 @@
+C:\Users\xogos\source\repos\xCore\xMenuServer\obj\Debug\xMenuServer.csprojAssemblyReference.cache
+C:\Users\xogos\source\repos\xCore\xMenuServer\obj\Debug\xMenuServer.csproj.CoreCompileInputs.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xMenuServer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xMenuServer.net.pdb
+C:\Users\xogos\source\repos\xCore\xMenuServer\obj\Debug\xMenuServer.net.dll
+C:\Users\xogos\source\repos\xCore\xMenuServer\obj\Debug\xMenuServer.net.pdb

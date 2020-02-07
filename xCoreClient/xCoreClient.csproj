@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\PrisonFivem\cfxResource\resources\xCore\</OutputPath>
+    <OutputPath>D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -50,7 +50,8 @@
     <Compile Include="Main\events\playerPushKey.cs" />
     <Compile Include="Main\events\default\playerSpawn.cs" />
     <Compile Include="Main\events\KeyEvent.cs" />
-    <Compile Include="Main\Player\ID.cs" />
+    <Compile Include="Main\Player\functions\ID.cs" />
+    <Compile Include="Main\Player\job\PlayerJob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

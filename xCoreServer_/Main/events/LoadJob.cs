@@ -6,6 +6,7 @@ namespace xCoreServer.JobInit
 {
     class LoadJob : BaseScript
     {
+        [EventHandler("xCore:server:loadPlayerJob")]
         public static void loadPlayerJob(int source)
         {
             Player player = new PlayerList()[source];
@@ -23,7 +24,7 @@ namespace xCoreServer.JobInit
                 }
                 else
                 {
-                    job = list[0].name;
+                    job =   list[0].name;
                     grade = list[0].grade;
                 }
 
