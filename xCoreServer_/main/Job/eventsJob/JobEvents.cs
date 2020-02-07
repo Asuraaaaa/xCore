@@ -18,7 +18,7 @@ namespace xCoreServer.main.Job.eventsJob
         public void getJobName(int source,dynamic value)
         {
             PlayerJob job = PlayerJobHolder.getPlayerJob(source);
-            var args = new List<string>() { job.getJobName().ToString(), job.getJobGrade().ToString() };
+            var args = new List<object>() { job.getJobName().ToString(), job.getJobGrade().ToString() };
             value(args);
         }
     }
