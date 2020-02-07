@@ -5,7 +5,6 @@ xCore is simple FiveM library
 ### PlayerJob functions and events
 
 **1. Functions (client side)**
-   - setPlayerJob(string job,string grade)
    - getJobGrade() returns player Job Grade
    - getJobName()  returns player Job Name
    
