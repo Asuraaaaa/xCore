@@ -2,6 +2,15 @@ xCore
 
 xCore is simple FiveM library
 
+### Teleport functions and events
+
+**1. Functions (client side)**
+   - teleportPlayer(int entity,Vector3 vec,float head = -999)
+   
+**2. Events (client side)**
+   - xCore:Client:teleport: (Will teleport player)
+      - Parameters: int entity,Vector3 vec,float head = -999
+
 ### MoneySystem functions and events
 
 **1. Functions (client side)**
