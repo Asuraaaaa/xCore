@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\</OutputPath>
+    <OutputPath>..\..\xMenuMaster\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -43,9 +43,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="xCoreClient.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xCoreClient.net.dll</HintPath>
+    <Reference Include="xCoreClient.net">
+      <HintPath>..\..\xCoreMaster\xCoreClient.net.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

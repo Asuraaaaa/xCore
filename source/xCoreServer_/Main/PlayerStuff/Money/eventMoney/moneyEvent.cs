@@ -7,7 +7,7 @@ namespace xCoreServer.main.Money.eventMoney
         [EventHandler("xCore:Server:getPlayerMoney")]
         public void getMoney(int source,string type,dynamic result)
         {
-            MoneyPlayer money = PlayerMoneyHolder.getPlayerMoney(source);
+            PlayerMoney money = PlayerMoneyHolder.getPlayerMoney(source);
             int result_ = int.MinValue;
             var money_      = money.getMoney();
             var bankmoney_  = money.getBankMoney();
@@ -23,7 +23,7 @@ namespace xCoreServer.main.Money.eventMoney
         [EventHandler("xCore:Server:setMoney")]
         public void setMoney(int source,string type,int money_)
         {
-            MoneyPlayer money = PlayerMoneyHolder.getPlayerMoney(source);
+            PlayerMoney money = PlayerMoneyHolder.getPlayerMoney(source);
 
             if (type.Equals("money"))      money.setMoney(source, money_);
             if (type.Equals("bankmoney"))  money.setBankMoney(source, money_);
@@ -33,7 +33,7 @@ namespace xCoreServer.main.Money.eventMoney
         [EventHandler("xCore:Server:addMoney")]
         public void addMoney(int source, string type, int money_)
         {
-            MoneyPlayer money = PlayerMoneyHolder.getPlayerMoney(source);
+            PlayerMoney money = PlayerMoneyHolder.getPlayerMoney(source);
 
             if (type.Equals("money"))      money.addMoney(source, money_);
             if (type.Equals("bankmoney"))  money.addBankMoney(source, money_);

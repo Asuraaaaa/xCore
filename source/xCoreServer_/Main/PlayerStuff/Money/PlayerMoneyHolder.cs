@@ -6,25 +6,25 @@ namespace xCoreServer.main.Money
 {
     class PlayerMoneyHolder : BaseScript
     {
-        public static Dictionary<int, MoneyPlayer> PlayerMoney = new Dictionary<int, MoneyPlayer>();
+        public static Dictionary<int, PlayerMoney> PlayerMoney = new Dictionary<int, PlayerMoney>();
 
-        public static MoneyPlayer getPlayerMoney(int source)
+        public static PlayerMoney getPlayerMoney(int source)
         {
-            MoneyPlayer job;
+            PlayerMoney job;
             PlayerMoney.TryGetValue(source, out job);
             return job;
         }
 
-        public static MoneyPlayer getPlayerMoney(Player player)
+        public static PlayerMoney getPlayerMoney(Player player)
         {
             int source = ID.GetPLayerId(player);           
             if (source == -1) return null;
-            MoneyPlayer job;
+            PlayerMoney job;
             PlayerMoney.TryGetValue(source, out job);
             return job;
         }
 
-        public static void saveMoneyPlayerToList(int source, MoneyPlayer job)
+        public static void saveMoneyPlayerToList(int source, PlayerMoney job)
         {
             if (PlayerMoney.ContainsKey(source))
             {
@@ -36,7 +36,7 @@ namespace xCoreServer.main.Money
             }
         }
 
-        public static void saveMoneyPlayerToList(Player player, MoneyPlayer job)
+        public static void saveMoneyPlayerToList(Player player, PlayerMoney job)
         {
             int source = ID.GetPLayerId(player);
             if (source == -1) return;

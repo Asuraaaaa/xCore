@@ -12,7 +12,6 @@ namespace xMenuServer
             
         }
 
-
         [EventHandler("xMenu:server:setJobCommand")]
         public void setJobCommand(int id, string name, int grade, dynamic result)
         {

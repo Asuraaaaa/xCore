@@ -2,7 +2,7 @@
  
 namespace xCoreServer.main.Money
 {
-    class MoneyPlayer : BaseScript
+    class PlayerMoney : BaseScript
     {
         private int money_ = 0;
         private int bank_ = 0;

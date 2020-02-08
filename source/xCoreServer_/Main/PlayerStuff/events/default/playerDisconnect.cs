@@ -18,7 +18,7 @@ namespace xCoreServer.main.events
                                           $"WHERE steamid = '{licenseIdentifier}'; ");
             PlayerJobHolder.removePlayerFromJobList(player);
             //=====================
-            MoneyPlayer money = PlayerMoneyHolder.getPlayerMoney(player);
+            PlayerMoney money = PlayerMoneyHolder.getPlayerMoney(player);
             if (money != null) MYSQL.execute($"UPDATE playermoney " +
                                              $"SET money = '{money.getMoney()}'," +
                                              $"bank = '{money.getBankMoney()}'," +

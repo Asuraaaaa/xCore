@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\</OutputPath>
+    <OutputPath>..\..\xCoreMaster\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -55,11 +55,13 @@
     <Compile Include="main\PlayerStuff\Job\PlayerJob.cs" />
     <Compile Include="main\PlayerStuff\Job\PlayerJobHolder.cs" />
     <Compile Include="main\PlayerStuff\Money\eventMoney\moneyEvent.cs" />
-    <Compile Include="main\PlayerStuff\Money\MoneyPlayer.cs" />
+    <Compile Include="main\PlayerStuff\Money\PlayerMoney.cs" />
     <Compile Include="main\PlayerStuff\Money\PlayerMoneyHolder.cs" />
     <Compile Include="main\Mysql\MYSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="main\PlayerStuff\groups\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

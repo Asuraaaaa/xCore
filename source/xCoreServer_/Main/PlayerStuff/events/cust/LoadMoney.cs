@@ -30,7 +30,7 @@ namespace xCoreServer.main.events
                     dirtyMoney_ = list[0].dirty_money;
                     Debug.WriteLine($"Nacitam hrace: {player.Name} [MONEYSYSTEM]");
                 }
-                MoneyPlayer money = new MoneyPlayer();
+                PlayerMoney money = new PlayerMoney();
 
                 money.setMoney     (id, money_);
                 money.setBankMoney (id, bank_);
