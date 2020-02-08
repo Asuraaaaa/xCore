@@ -4,6 +4,9 @@ xCore is simple FiveM library
 
 ### Teleport functions and events
 
+Class name: **_teleport_**
+        
+
 **1. Functions (client side)**
    - teleportPlayer(int entity,Vector3 vec,float head = -999)
    
@@ -13,10 +16,14 @@ xCore is simple FiveM library
 
 ### MoneySystem functions and events
 
+Class name: **_PlayerMoney_**
+
 **1. Functions (client side)**
    - getMoney()       returns how much money player has in pocket
    - getBankMoney()   returns how much money player has in bank
    - getDirtyMoney()  returns how much dirty money player has in pocket
+
+Class name: **_PlayerMoney_**
 
 **2. Functions (server side)**
    - PlayerMoneyHolder.getPlayerMoney(int source)
@@ -51,9 +58,13 @@ xCore is simple FiveM library
 
 ### PlayerJob functions and events
 
+Class name: **_PlayerJob_**
+
 **1. Functions (client side)**
    - getJobGrade() returns player Job Grade
    - getJobName()  returns player Job Name
+   
+Class name: **_PlayerJob_**
    
 **2. Functions (server side)**
    - PlayerJobHolder.getPlayerJob(int source)
