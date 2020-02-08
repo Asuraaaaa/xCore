@@ -1,5 +1,5 @@
 ﻿using CitizenFX.Core;
-
+ 
 namespace xCoreServer.Job
 {
     class PlayerJob : BaseScript

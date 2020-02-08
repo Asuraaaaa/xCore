@@ -1,7 +1,7 @@
 ﻿using CitizenFX.Core;
 using System.Collections.Generic;
 using xCoreServer.Job;
-
+ 
 namespace xCoreServer.JobInit
 {
     class LoadJob : BaseScript

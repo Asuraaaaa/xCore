@@ -1,6 +1,7 @@
 ﻿using CitizenFX.Core;
 using System.Collections.Generic;
-
+using xCoreServer.main.functions;
+ 
 namespace xCoreServer.Job
 {
     class PlayerJobHolder : BaseScript
@@ -16,7 +17,7 @@ namespace xCoreServer.Job
 
         public static PlayerJob getPlayerJob(Player player)
         {
-            int source = GetPLayerId(player);
+            int source = ID.GetPLayerId(player);
             if (source == -1) return null;
             PlayerJob job;
             PlayersJobs.TryGetValue(source, out job);
@@ -37,7 +38,7 @@ namespace xCoreServer.Job
 
         public static void savePlayerToList(Player player, PlayerJob job)
         {
-            int source = GetPLayerId(player);
+            int source = ID.GetPLayerId(player);
             if (source == -1) return;
             if (PlayersJobs.ContainsKey(source))
             {
@@ -56,22 +57,8 @@ namespace xCoreServer.Job
 
         public static void removePlayerFromJobList(Player player)
         {
-            int source = GetPLayerId(player);
+            int source = ID.GetPLayerId(player);
             PlayersJobs.Remove(source);
-        }
-
-        public static int GetPLayerId(Player player)
-        {
-            int id = 0;
-            foreach (Player pp in new PlayerList())
-            {
-                id++;
-                if (pp == player)
-                {
-                    return id;
-                }
-            }
-            return -1;
         }
     }
 }

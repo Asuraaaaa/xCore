@@ -46,12 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientMain.cs" />
-    <Compile Include="Main\events\PlayerJobLoaded.cs" />
-    <Compile Include="Main\events\playerPushKey.cs" />
-    <Compile Include="Main\events\default\playerSpawn.cs" />
-    <Compile Include="Main\events\KeyEvent.cs" />
+    <Compile Include="Main\events\cust\PlayerJobLoaded.cs" />
+    <Compile Include="Main\events\cust\playerPushKey.cs" />
+    <Compile Include="Main\events\def\playerSpawn.cs" />
+    <Compile Include="Main\events\cust\KeyEvent.cs" />
+    <Compile Include="Main\events\def\resourceStart.cs" />
     <Compile Include="Main\Player\functions\ID.cs" />
     <Compile Include="Main\Player\job\PlayerJob.cs" />
+    <Compile Include="Main\Player\money\PlayerMoney.cs" />
+    <Compile Include="Main\Player\teleport\teleport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

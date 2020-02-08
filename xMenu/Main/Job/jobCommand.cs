@@ -1,22 +1,48 @@
 ﻿using CitizenFX.Core;
-using CitizenFX.Core.Native;
+using CitizenFX.Core.UI;
 using System;
-using System.Collections.Generic;
+using System.Threading.Tasks;
+using xCoreClient.main.Player;
+using xCoreClient.Main.Player.money;
 
 namespace xMenuClient.Main.Job
 {
     class jobCommand : BaseScript
     {
-
-        public static int playerID()
+        [Command("givemoney")]
+        async Task givemoney(string[] args)
         {
-            return API.GetPlayerServerId(API.NetworkGetEntityOwner(API.PlayerPedId()));
+            int money = 0;
+            Int32.TryParse(args[1], out money);
+            TriggerServerEvent("xCore:Server:addMoney", ID.playerID(), args[0], money);
+        }
+
+        [Command("setmoney")]
+        async Task setmoney(string[] args)
+        {
+            int money = 0;
+            Int32.TryParse(args[1], out money);
+            TriggerServerEvent("xCore:Server:setMoney", ID.playerID(), args[0], money);
+        }
+
+        [Command("getmoney")]
+        async Task savemoneyAsync()
+        {
+            PlayerMoney money = new PlayerMoney();
+
+            int money_ = await money.getMoney();
+            int bank_  = await money.getBankMoney();
+            int dirty_ = await money.getDirtyMoney();
+
+            Screen.ShowNotification($"Money:      {money_}");
+            Screen.ShowNotification($"Bank:       {bank_}");
+            Screen.ShowNotification($"DirtyMoney: {dirty_}");
         }
 
         [Command("getjob")]
         void getjob()
         {
-            TriggerServerEvent("xCore:Server:getJob", playerID(), new Action<dynamic>((value) =>
+            TriggerServerEvent("xCore:Server:getJob", ID.playerID(), new Action<dynamic>((value) =>
             {
                 TriggerEvent("chatMessage", "PRACE VOLE", new[] { 255, 0, 0 }, $"{value[0]}");
                 TriggerEvent("chatMessage", "PRACE VOLE", new[] { 255, 0, 0 }, $"{value[1]}");
@@ -34,7 +60,7 @@ namespace xMenuClient.Main.Job
             }
             TriggerServerEvent("xMenu:server:setJobCommand", args[0], args[1], args[2], new Action<object>((result) =>
             {
-                Debug.WriteLine(result + "");
+                if((bool)result == false) TriggerEvent("chatMessage", "/setJob", new[] { 255, 0, 0 }, " prace neexistuje!");
             }));
         }
     }

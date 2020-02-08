@@ -46,14 +46,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="main\events\default\playerConnect.cs" />
-    <Compile Include="main\events\default\playerDisconnect.cs" />
-    <Compile Include="main\events\LoadJob.cs" />
-    <Compile Include="main\Job\eventsJob\JobEvents.cs" />
-    <Compile Include="main\Job\PlayerJob.cs" />
-    <Compile Include="main\Job\PlayerJobHolder.cs" />
+    <Compile Include="main\PlayerStuff\events\default\playerConnect.cs" />
+    <Compile Include="main\PlayerStuff\events\default\playerDisconnect.cs" />
+    <Compile Include="main\PlayerStuff\events\cust\LoadJob.cs" />
+    <Compile Include="main\PlayerStuff\events\cust\LoadMoney.cs" />
+    <Compile Include="main\functions\ID.cs" />
+    <Compile Include="main\PlayerStuff\Job\eventsJob\JobEvents.cs" />
+    <Compile Include="main\PlayerStuff\Job\PlayerJob.cs" />
+    <Compile Include="main\PlayerStuff\Job\PlayerJobHolder.cs" />
+    <Compile Include="main\PlayerStuff\Money\eventMoney\moneyEvent.cs" />
+    <Compile Include="main\PlayerStuff\Money\MoneyPlayer.cs" />
+    <Compile Include="main\PlayerStuff\Money\PlayerMoneyHolder.cs" />
     <Compile Include="main\Mysql\MYSQL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

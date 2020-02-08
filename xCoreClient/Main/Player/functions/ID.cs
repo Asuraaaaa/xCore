@@ -3,7 +3,7 @@ using CitizenFX.Core.Native;
 
 namespace xCoreClient.main.Player
 {
-    class ID : BaseScript
+    public class ID : BaseScript
     {
         public static int playerID()
         {

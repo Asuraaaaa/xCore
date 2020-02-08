@@ -5,3 +5,4 @@ C:\Users\xogos\source\repos\xCore\xCoreClient\obj\Debug\xCoreClient.net.dll
 C:\Users\xogos\source\repos\xCore\xCoreClient\obj\Debug\xCoreClient.net.pdb
 D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xCoreClient.net.dll
 D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xCoreClient.net.pdb
+C:\Users\xogos\source\repos\xCore\xCoreClient\obj\Debug\xCoreClient.csprojAssemblyReference.cache

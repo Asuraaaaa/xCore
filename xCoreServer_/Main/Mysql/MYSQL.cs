@@ -1,7 +1,7 @@
 ﻿using CitizenFX.Core;
 using System;
 using System.Collections.Generic;
-
+ 
 namespace xCoreServer
 {
     public class MYSQL : BaseScript
@@ -23,8 +23,14 @@ namespace xCoreServer
                 " grade VARCHAR(32) NOT NULL," +
                 " steamid VARCHAR(50) NOT NULL," +
                 " PRIMARY KEY(id)) ENGINE = InnoDB; ");
-            
 
+            execute("CREATE TABLE playermoney " +
+                "( id INT NOT NULL AUTO_INCREMENT ," +
+                " steamid VARCHAR(50) NOT NULL ," +
+                " money INT NOT NULL ," +
+                " bank INT NOT NULL ," +
+                " dirty_money INT NOT NULL ," +
+                " PRIMARY KEY (id)) ENGINE = InnoDB;");
         }
 
         public static void FetchAll(string query, Dictionary<string, object> pars, Action<List<dynamic>> action) => Main.ML.mysql_fetch_all(query, pars, action);

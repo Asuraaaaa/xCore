@@ -3,3 +3,4 @@ D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xMenu.net.pdb
 C:\Users\xogos\source\repos\xCore\xMenu\obj\Debug\xMenuClient.csproj.CoreCompileInputs.cache
 C:\Users\xogos\source\repos\xCore\xMenu\obj\Debug\xMenu.net.dll
 C:\Users\xogos\source\repos\xCore\xMenu\obj\Debug\xMenu.net.pdb
+C:\Users\xogos\source\repos\xCore\xMenu\obj\Debug\xMenuClient.csprojAssemblyReference.cache

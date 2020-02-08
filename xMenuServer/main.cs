@@ -9,7 +9,7 @@ namespace xMenuServer
     {
         public main()
         {
-            Debug.WriteLine(" ========================================");
+            
         }
 
 
@@ -18,7 +18,8 @@ namespace xMenuServer
         {
             MYSQL.FetchAll($"SELECT * FROM jobgrades WHERE name = '{name}' AND grade ='{grade}'", null, (List<dynamic> list) =>
             {
-                if (list == null)
+                int count = (list == null) ? 0 : list.Count;
+                if (count == 0)
                 {
                     result(false);
                 }
