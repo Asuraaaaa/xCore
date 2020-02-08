@@ -54,7 +54,7 @@
     <Compile Include="Main\Player\functions\ID.cs" />
     <Compile Include="Main\Player\job\PlayerJob.cs" />
     <Compile Include="Main\Player\money\PlayerMoney.cs" />
-    <Compile Include="Main\Player\teleport\teleport.cs" />
+    <Compile Include="Main\Player\functions\teleport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
