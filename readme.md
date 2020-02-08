@@ -14,13 +14,13 @@ xCore is simple FiveM library
       - Will return player instance for class money.
       
    - setMoney(int source,int money)
-      - returns how much money player has in pocket
+      - will set money
       
    - setBankMoney(int source,int money)   
-      - returns how much money player has in bank
+      - will set money
       
    - setDirtyMoney(int source,int money)  
-      - returns how much dirty money player has in pocket
+      - will set money
    
    - getMoney()       returns how much money player has in pocket
    - getBankMoney()   returns how much money player has in bank
