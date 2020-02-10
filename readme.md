@@ -257,6 +257,6 @@ Example
 [EventHandler("xCore:client:keyEvent")]
 void keyEvent(int KeyCode)
 {
-    Debug.WriteLine($"Dang, you pushed key: {key}");
+    Debug.WriteLine($"Dang, you pushed key: {KeyCode}");
 }
 ```
