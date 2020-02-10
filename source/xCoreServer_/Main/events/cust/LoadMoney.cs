@@ -32,9 +32,11 @@ namespace xCoreServer.main.events
                 }
                 PlayerMoney money = new PlayerMoney();
 
-                money.setMoney     (id, money_);
-                money.setBankMoney (id, bank_);
-                money.setDirtyMoney(id, dirtyMoney_);
+                money.setPlayer(player);
+
+                money.setMoney     (money_);
+                money.setBankMoney (bank_);
+                money.setDirtyMoney(dirtyMoney_);
 
                 PlayerMoneyHolder.saveMoneyPlayerToList(id, money);
             });

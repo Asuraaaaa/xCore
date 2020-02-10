@@ -7,40 +7,20 @@ namespace xCoreClient.Main.Player.money
 {
     public class PlayerMoney : BaseScript
     {
-        public async Task<int> getMoney()
+        private int dirtyMoney;
+        private int bankMoney;
+        private int money_;
+
+        [EventHandler("xCore:Client:MoneyUpdated")]
+        private void playerUpdateMoney(string type,int money)
         {
-            int money = await readEvent("money");
-            return money;
+            if (type == "dirtymoney") this.bankMoney  = money;
+            if (type == "bankmoney")  this.dirtyMoney = money;
+            if (type == "money")      this.money_     = money;
         }
 
-        public async Task<int> getBankMoney()
-        {
-            int money = await readEvent("bankmoney");
-            return money;
-        }
-
-        public async Task<int> getDirtyMoney()
-        {
-            int money = await readEvent("dirtymoney");
-            return money;
-        }
-
-        private async Task<int> readEvent(string result)
-        {
-            int obj = Int32.MinValue;
-            bool finish = false;
-            int letgo = 0;
-
-            TriggerServerEvent("xCore:Server:getPlayerMoney", ID.playerID(), result, new Action<dynamic>((value) => {
-                obj = value;
-                finish = true;
-            }));
-            while (finish == false)
-            {
-                await Delay(50);
-                if (++letgo == 4) finish = true;
-            }
-            return obj;
-        }
+        public int getDirtyMoney() => this.dirtyMoney;
+        public int getBankMoney() => this.bankMoney;
+        public int getMoney() => this.money_;
     }
 }

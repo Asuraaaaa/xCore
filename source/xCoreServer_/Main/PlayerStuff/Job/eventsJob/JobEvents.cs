@@ -11,7 +11,6 @@ namespace xCoreServer.main.Job.eventsJob
        {
             PlayerJob job = PlayerJobHolder.getPlayerJob(source);
             job.setPlayerJob(source, jobName, grade);
-            PlayerJobHolder.savePlayerToList(source, job);
        }
 
         [EventHandler("xCore:Server:getJob")]

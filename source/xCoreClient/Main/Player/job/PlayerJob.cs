@@ -1,40 +1,22 @@
 ﻿using CitizenFX.Core;
 using System;
-using System.Threading.Tasks;
-using xCoreClient.main.Player;
 
 namespace xCoreClient.Main.Player.job
 {
     public class PlayerJob : BaseScript
     {
-        public async Task<string> getJobName()
+        private string jobName;
+        private string JobGrade;
+
+        [EventHandler("xCore:client:setJob")]
+        private void playerJobUpdated(string name,string grade)
         {
-            string jobName = await readEvent(0);
-            return jobName;
+            this.jobName = name;
+            this.JobGrade = grade;
         }
 
-        public async Task<string> getJobGrade()
-        {
-            string jobName = await readEvent(1);
-            return jobName;
-        }
+        public string getJobName() => this.jobName;
+        public string getJobGrade() => this.JobGrade;
 
-        private async Task<string> readEvent(int result)
-        {
-            string obj = null;
-            bool finish = false;
-            int letgo = 0;
-
-            TriggerServerEvent("xCore:Server:getJob", ID.playerID(), new Action<dynamic>((value) => {
-                obj = value[result];
-                finish = true;
-            }));
-            while (finish == false)
-            {
-                await Delay(50);
-                if (++letgo == 4) finish = true;
-            }
-            return obj;
-        }
     }
 }

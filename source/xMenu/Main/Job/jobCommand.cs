@@ -9,8 +9,20 @@ namespace xMenuClient.Main.Job
 {
     class jobCommand : BaseScript
     {
+        [Command("addgroup")]
+        void addGroup(string[] args)
+        {
+            TriggerServerEvent("xCore:Server:addPlayerGroup", ID.playerID(), args[0]);
+        }
+
+        [Command("removeGroup")]
+        void removeGroup(string[] args)
+        {
+            TriggerServerEvent("xCore:Server:removePlayerGroup", ID.playerID(), args[0]);
+        }
+
         [Command("givemoney")]
-        async Task givemoney(string[] args)
+        void givemoney(string[] args)
         {
             int money = 0;
             Int32.TryParse(args[1], out money);
@@ -18,7 +30,7 @@ namespace xMenuClient.Main.Job
         }
 
         [Command("setmoney")]
-        async Task setmoney(string[] args)
+        void setmoney(string[] args)
         {
             int money = 0;
             Int32.TryParse(args[1], out money);
@@ -26,13 +38,13 @@ namespace xMenuClient.Main.Job
         }
 
         [Command("getmoney")]
-        async Task savemoneyAsync()
+        void savemoneyAsync()
         {
             PlayerMoney money = new PlayerMoney();
 
-            int money_ = await money.getMoney();
-            int bank_  = await money.getBankMoney();
-            int dirty_ = await money.getDirtyMoney();
+            int money_ = money.getMoney();
+            int bank_  = money.getBankMoney();
+            int dirty_ = money.getDirtyMoney();
 
             Screen.ShowNotification($"Money:      {money_}");
             Screen.ShowNotification($"Bank:       {bank_}");

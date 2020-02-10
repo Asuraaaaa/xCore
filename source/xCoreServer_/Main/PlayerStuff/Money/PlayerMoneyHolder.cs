@@ -4,7 +4,7 @@ using xCoreServer.main.functions;
 
 namespace xCoreServer.main.Money
 {
-    class PlayerMoneyHolder : BaseScript
+    public class PlayerMoneyHolder : BaseScript
     {
         public static Dictionary<int, PlayerMoney> PlayerMoney = new Dictionary<int, PlayerMoney>();
 
@@ -18,7 +18,6 @@ namespace xCoreServer.main.Money
         public static PlayerMoney getPlayerMoney(Player player)
         {
             int source = ID.GetPLayerId(player);           
-            if (source == -1) return null;
             PlayerMoney job;
             PlayerMoney.TryGetValue(source, out job);
             return job;
@@ -39,7 +38,6 @@ namespace xCoreServer.main.Money
         public static void saveMoneyPlayerToList(Player player, PlayerMoney job)
         {
             int source = ID.GetPLayerId(player);
-            if (source == -1) return;
             if (PlayerMoney.ContainsKey(source))
             {
                 PlayerMoney[source] = job;

@@ -4,7 +4,7 @@ using xCoreServer.main.functions;
  
 namespace xCoreServer.Job
 {
-    class PlayerJobHolder : BaseScript
+    public class PlayerJobHolder : BaseScript
     {
         public static Dictionary<int, PlayerJob> PlayersJobs = new Dictionary<int, PlayerJob>();
 
@@ -18,7 +18,6 @@ namespace xCoreServer.Job
         public static PlayerJob getPlayerJob(Player player)
         {
             int source = ID.GetPLayerId(player);
-            if (source == -1) return null;
             PlayerJob job;
             PlayersJobs.TryGetValue(source, out job);
             return job;
@@ -39,7 +38,6 @@ namespace xCoreServer.Job
         public static void savePlayerToList(Player player, PlayerJob job)
         {
             int source = ID.GetPLayerId(player);
-            if (source == -1) return;
             if (PlayersJobs.ContainsKey(source))
             {
                 PlayersJobs[source] = job;

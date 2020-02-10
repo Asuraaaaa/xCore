@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCoreServer_", "xCoreServer_\xCoreServer.csproj", "{01A2F706-8AFF-42F5-BA13-0A89EA92A6A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCoreServer", "xCoreServer_\xCoreServer.csproj", "{01A2F706-8AFF-42F5-BA13-0A89EA92A6A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCoreClient", "xCoreClient\xCoreClient.csproj", "{D798AD9A-13A4-4BF7-99B3-DB63A2174A80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xMenuClient", "xMenu\xMenuClient.csproj", "{DC73E084-E543-4BC6-8CC1-934D462C7199}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xAdminClient", "xMenu\xAdminClient.csproj", "{DC73E084-E543-4BC6-8CC1-934D462C7199}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xMenuServer", "xMenuServer\xMenuServer.csproj", "{5B4143C4-DAAB-4278-896F-ED3F7FFD7B1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xAdminServer", "xMenuServer\xAdminServer.csproj", "{5B4143C4-DAAB-4278-896F-ED3F7FFD7B1D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xCore", "xCore", "{CBE26A7C-0467-4191-B404-9C7D9B3DBA6A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xMenuClient", "xMenuClient", "{BCDBBABE-2369-4D97-8E69-83FC689576CA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xAdmin", "xAdmin", "{BCDBBABE-2369-4D97-8E69-83FC689576CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

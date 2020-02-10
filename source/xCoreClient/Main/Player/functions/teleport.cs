@@ -7,6 +7,11 @@ namespace xCoreClient.Main.Player.teleport
     public class teleport : BaseScript
     {
         [EventHandler("xCore:Client:teleport")]
+        public void tele(int entity, Vector3 vec, float heading = -999)
+        {
+            teleportPlayer(entity, vec, heading);
+        }
+
         public static async Task teleportPlayer(int entity,Vector3 vec,float heading = -999)
         {
             if(API.DoesEntityExist(entity))

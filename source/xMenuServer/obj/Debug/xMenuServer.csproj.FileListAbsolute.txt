@@ -10,3 +10,11 @@ D:\PrisonFivem\cfxResource\resources\[xCore]\source\xMenuServer\obj\Debug\xMenuS
 D:\PrisonFivem\cfxResource\resources\[xCore]\source\xMenuServer\obj\Debug\xMenuServer.net.pdb
 D:\PrisonFivem\cfxResource\resources\[xCore]\xMenuMaster\xMenuServer.net.dll
 D:\PrisonFivem\cfxResource\resources\[xCore]\xMenuMaster\xMenuServer.net.pdb
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\source\xMenuServer\obj\Debug\xMenuServer.csprojAssemblyReference.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\source\xMenuServer\obj\Debug\xMenuServer.csproj.CoreCompileInputs.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\source\xMenuServer\obj\Debug\xMenuServer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\source\xMenuServer\obj\Debug\xMenuServer.net.pdb
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xMenuMaster\xMenuServer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xMenuMaster\xMenuServer.net.pdb
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xCoreMaster\xMenuServer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xCoreMaster\xMenuServer.net.pdb

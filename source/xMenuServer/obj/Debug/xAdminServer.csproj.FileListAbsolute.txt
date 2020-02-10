@@ -1,0 +1,12 @@
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xCoreMaster\xAdminServer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\xCoreMaster\xAdminServer.net.pdb
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\source\xMenuServer\obj\Debug\xAdminServer.csprojAssemblyReference.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\source\xMenuServer\obj\Debug\xAdminServer.csproj.CoreCompileInputs.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\source\xMenuServer\obj\Debug\xAdminServer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCore\source\xMenuServer\obj\Debug\xAdminServer.net.pdb
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCoreMaster\xAdminServer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCoreMaster\xAdminServer.net.pdb
+D:\PrisonFivem\cfxResource\resources\[xCore]\source\xMenuServer\obj\Debug\xAdminServer.csprojAssemblyReference.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\source\xMenuServer\obj\Debug\xAdminServer.csproj.CoreCompileInputs.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\source\xMenuServer\obj\Debug\xAdminServer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\source\xMenuServer\obj\Debug\xAdminServer.net.pdb

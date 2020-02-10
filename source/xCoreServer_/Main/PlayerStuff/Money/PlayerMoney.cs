@@ -2,28 +2,32 @@
  
 namespace xCoreServer.main.Money
 {
-    class PlayerMoney : BaseScript
+    public class PlayerMoney : BaseScript
     {
         private int money_ = 0;
         private int bank_ = 0;
         private int dirtyMoney_ = 0;
+        private Player player_;
 
-        public void setMoney(int source,int result)
+        public void setPlayer(Player player) => this.player_ = player;
+        public Player getPlayer() => this.player_;
+
+        public void setMoney(int result)
         {
             this.money_ = result;
-            Player player = new PlayerList()[source];
+            Player player = getPlayer();
             player.TriggerEvent("xCore:Client:MoneyUpdated", "money", result);
         }
-        public void setBankMoney(int source, int result)
+        public void setBankMoney(int result)
         {
             this.bank_ = result;
-            Player player = new PlayerList()[source];
+            Player player = getPlayer();
             player.TriggerEvent("xCore:Client:MoneyUpdated", "bankmoney", result);
         }
-        public void setDirtyMoney(int source, int result)
+        public void setDirtyMoney(int result)
         {
             this.dirtyMoney_ = result;
-            Player player = new PlayerList()[source];
+            Player player = getPlayer();
             player.TriggerEvent("xCore:Client:MoneyUpdated", "dirtymoney", result);
         }
 
@@ -33,8 +37,8 @@ namespace xCoreServer.main.Money
         public int getDirtyMoney() => this.dirtyMoney_;
 
 
-        public void addMoney(int source, int result) => setMoney(source, getMoney() + result);
-        public void addBankMoney(int source, int result) => setMoney(source, getMoney() + result);
-        public void addDirtyMoney(int source, int result) => setMoney(source, getMoney() + result);
+        public void addMoney(int result) => setMoney(getMoney() + result);
+        public void addBankMoney(int result) => setMoney(getMoney() + result);
+        public void addDirtyMoney(int result) => setMoney(getMoney() + result);
     }
 }

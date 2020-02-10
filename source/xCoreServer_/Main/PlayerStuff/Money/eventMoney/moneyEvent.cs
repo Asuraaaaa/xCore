@@ -25,9 +25,9 @@ namespace xCoreServer.main.Money.eventMoney
         {
             PlayerMoney money = PlayerMoneyHolder.getPlayerMoney(source);
 
-            if (type.Equals("money"))      money.setMoney(source, money_);
-            if (type.Equals("bankmoney"))  money.setBankMoney(source, money_);
-            if (type.Equals("dirtymoney")) money.setDirtyMoney(source,money_);
+            if (type.Equals("money"))      money.setMoney(money_);
+            if (type.Equals("bankmoney"))  money.setBankMoney(money_);
+            if (type.Equals("dirtymoney")) money.setDirtyMoney(money_);
         }
 
         [EventHandler("xCore:Server:addMoney")]
@@ -35,9 +35,9 @@ namespace xCoreServer.main.Money.eventMoney
         {
             PlayerMoney money = PlayerMoneyHolder.getPlayerMoney(source);
 
-            if (type.Equals("money"))      money.addMoney(source, money_);
-            if (type.Equals("bankmoney"))  money.addBankMoney(source, money_);
-            if (type.Equals("dirtymoney")) money.addDirtyMoney(source, money_);
+            if (type.Equals("money"))      money.addMoney(money_);
+            if (type.Equals("bankmoney"))  money.addBankMoney(money_);
+            if (type.Equals("dirtymoney")) money.addDirtyMoney(money_);
         }
     }
 }

@@ -1,4 +1,7 @@
 ﻿using CitizenFX.Core;
+using CitizenFX.Core.Native;
+using CitizenFX.Core.UI;
+using xCoreClient.Main.Player.job;
 
 namespace xCoreClient
 {
@@ -9,17 +12,16 @@ namespace xCoreClient
 
         }
 
-        /*
-        [Command("test")]
-        async Task test()
+        [Command("save")]
+        void test()
         {
             PlayerJob job = new PlayerJob();
 
-            string name =  await job.getJobName();
-            string grade = await job.getJobGrade();
+            string name =  job.getJobName();
+            string grade = job.getJobGrade();
 
             Screen.ShowNotification($"{name}:{grade}");
+            
         }
-        */
     }
 }

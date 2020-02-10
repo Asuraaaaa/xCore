@@ -30,7 +30,9 @@ namespace xCoreServer.JobInit
 
                 player.TriggerEvent("xCore:client:LoadJob", job, grade);
                 PlayerJob pJob = new PlayerJob();
-                pJob.setPlayerJob(source, job, grade);
+                pJob.setPlayer(player);
+
+                pJob.setPlayerJob(job, grade);
                 PlayerJobHolder.savePlayerToList(source, pJob);
             });           
         }
