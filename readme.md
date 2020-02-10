@@ -1,5 +1,16 @@
 xCore is simple FiveM library made for RolePLay servers. but... can be used anywhere i guess ?
 
+TODO
+
+- [ ] Inventory system
+- [ ] Notifications
+- [ ] Property system
+- [ ] Sound system
+
+- [x] Group system
+- [x] Job system
+- [x] Money system
+
 ### GroupSystem functions and events
 
 Class name: **_PlayerGroup_**
