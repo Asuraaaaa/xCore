@@ -6,8 +6,8 @@ TODO
 - [ ] Notifications
 - [ ] Property system
 - [ ] Sound system
-‎
-‎
+&#8203;
+&#8203;
 - [x] Group system
 - [x] Job system
 - [x] Money system
@@ -22,25 +22,33 @@ Class name: **_PlayerGroup_**
       
    - getPlayerGroups() 
       - return List<string>()    
-        
+        &#8203;
+   &#8203;
+   &#8203;
 Class name: **_PlayerGroup_**
         
 **2. Functions (server side)**
    - add(string group)
       - Will add a new group to player.       
-
+&#8203;
+&#8203;
    - remove(string group)
       - Will remove group from player.     
-      
+      &#8203;
+      &#8203;
    - isAtGroup(string group)
       - Will return true/false
-
+&#8203;
+&#8203;
    - exists(string group)
       - Will return true/false
       
+      &#8203;
+      &#8203;
    - PlayerGroupHolder.getPlayerGroup(int source OR Player player)
       - Will return instance for player group class.
-      
+      &#8203;
+      &#8203;
 **3. Events (server)**     
    - xCore:Server:addPlayerGroup: (Will add group to player)
       - Parameters: int source,string group
