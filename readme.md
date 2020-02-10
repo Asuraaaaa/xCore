@@ -1,13 +1,11 @@
 xCore is simple FiveM library made for RolePLay servers. but... can be used anywhere i guess ?
 
-TODO
+####TO DO
 
 - [ ] Inventory system
 - [ ] Notifications
 - [ ] Property system
 - [ ] Sound system
-&#8203;
-&#8203;
 - [x] Group system
 - [x] Job system
 - [x] Money system
@@ -17,51 +15,46 @@ TODO
 Class name: **_PlayerGroup_**
 
 **1. Functions (client side)**
+------------
+Class name: **_PlayerGroup_**
    - isAtGroup(string group)
-      - return true/false   
+     return true/false   
       
    - getPlayerGroups() 
-      - return List<string>()    
-        &#8203;
-   &#8203;
-   &#8203;
-Class name: **_PlayerGroup_**
-        
+     return List<string>()    
+ 
+------------
 **2. Functions (server side)**
+------------
+Class name: **_PlayerGroup_**
    - add(string group)
-      - Will add a new group to player.       
-&#8203;
-&#8203;
+     Will add a new group to player.       
+	 
    - remove(string group)
-      - Will remove group from player.     
-      &#8203;
-      &#8203;
+      Will remove group from player.     
+
    - isAtGroup(string group)
-      - Will return true/false
-&#8203;
-&#8203;
+      Will return true/false
+	  
    - exists(string group)
-      - Will return true/false
-      
-      &#8203;
-      &#8203;
+      Will return true/false
+
    - PlayerGroupHolder.getPlayerGroup(int source OR Player player)
-      - Will return instance for player group class.
-      &#8203;
-      &#8203;
+      Will return instance for player group class.
+------------
 **3. Events (server)**     
    - xCore:Server:addPlayerGroup: (Will add group to player)
-      - Parameters: int source,string group
+      Parameters: int source,string group
       
    - xCore:Server:removePlayerGroup: (Will remove group from player)
-      - Parameters: int source,string group
+      Parameters: int source,string group
       
 **4. Events (client)**     
    - xCore:Client:GroupAdded: (Will call whenever player receive new group)
-      - Parameters: string group
+      Parameters: string group
       
    - xCore:Client:GroupRemove: (Will call whenever group is removed from player)
-      - Parameters: string group      
+      Parameters: string group      
       
  **Example client**       
  
@@ -95,16 +88,17 @@ public void giveMoney([FromSource] Player player,Player target,string type,int m
 ``` 
  
 ### Teleport functions and events
-
-Class name: **_teleport_**
         
 
 **1. Functions (client side)**
+------------
+Class name: **_teleport_**
    - teleportPlayer(int entity,Vector3 vec,float head = -999)
    
+------------   
 **2. Events (client side)**
    - xCore:Client:teleport: (Will teleport player)
-      - Parameters: int entity,Vector3 vec,float head = -999
+      Parameters: int entity,Vector3 vec,float head = -999
 
  **Example client**       
  
@@ -126,51 +120,59 @@ void healCommand(string[] args)
 Class name: **_PlayerMoney_**
 
 **1. Functions (client side)**
+------------
+Class name: **_PlayerMoney_**
    - getMoney()       returns how much money player has in pocket
    - getBankMoney()   returns how much money player has in bank
    - getDirtyMoney()  returns how much dirty money player has in pocket
-
-Class name: **_PlayerMoney_**
+------------
 
 **2. Functions (server side)**
+------------
+Class name: **_PlayerMoney_**
    - PlayerMoneyHolder.getPlayerMoney(int source)
-      - Will return player instance for class money.
+      Will return player instance for class money.
       
    - setMoney(int money)
-      - will set money
+      will set money
       
    - setBankMoney(int money)   
-      - will set money
+      will set money
       
    - setDirtyMoney(int money)  
-      - will set money
+      will set money
       
    - addDirtyMoney(int money)
-      - will add money
+      will add money
       
    - addBankMoney(int money)   
-      - will add money
+      will add money
       
    - addMoney(int money)  
-      - will add money      
+      will add money      
    
-   - getMoney()       returns how much money player has in pocket
-   - getBankMoney()   returns how much money player has in bank
-   - getDirtyMoney()  returns how much dirty money player has in pocket
+   - getMoney()  
+      returns how much money player has in pocket
+   - getBankMoney() 
+      returns how much money player has in bank
+   
+   - getDirtyMoney()  
+      returns how much dirty money player has in pocket
+------------
 
 **3. Events (server)**
    - xCore:Server:getPlayerMoney: (Will return players money)
-      - Parameters: int id,string type, return type in int (if something is wrong it will return int.MinValue)
+      Parameters: int id,string type, return type in int (if something is wrong it will return int.MinValue)
       
    - xCore:Server:setMoney: (Will set player money)
-      - Parameters: int id,string type,int money 
+      Parameters: int id,string type,int money 
       
    - xCore:Server:addMoney: (Will add balance to player account)
-      - Parameters: int id,string type,int money 
+      Parameters: int id,string type,int money 
    
 **4. Events (client side)**
    - xCore:Client:MoneyUpdated: (Will call whenever player earn cash)
-      - Parameters: string(typeMoney) , int(MoneyCount)
+      Parameters: string(typeMoney) , int(MoneyCount)
 
  **Example client**       
  
@@ -205,34 +207,35 @@ void playerCar([FromSource] Player player,string car)
 
 ### PlayerJob functions and events
 
-Class name: **_PlayerJob_**
-
 **1. Functions (client side)**
+------------
+Class name: **_PlayerJob_**
    - getJobGrade() returns player Job Grade
    - getJobName()  returns player Job Name
-   
-Class name: **_PlayerJob_**
+------------ 
    
 **2. Functions (server side)**
+------------
+Class name: **_PlayerJob_**
    - PlayerJobHolder.getPlayerJob(int source)
-      - Will return player instance for class job. 
+      Will return player instance for class job. 
       
    - setPlayerJob(int id,string job,string grade)
    
    - getJobGrade(int id) returns player Job Grade
    
    - getJobName(int id)  returns player Job Name
-   
+------------   
 **3. Events (server)**
    - xCore:Server:setJob: (Will set player job)
-      - Parameters: int id,string job,string grade      
+      Parameters: int id,string job,string grade      
    
 **4. Events (client side)**
    - xCore:client:setJob: (Will call whenever player jobs got updated)
-      - Parameters: string job,string grade
+      Parameters: string job,string grade
       
    - xCore:client:jobLoaded: (Will call when player spawn in game)
-      - Parameters: string job,string grade
+      Parameters: string job,string grade
  
  **Example client**       
  
@@ -279,8 +282,4 @@ void keyEvent(int KeyCode)
 {
     Debug.WriteLine($"Dang, you pushed key: {KeyCode}");
 }
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> 4f83d302531ae626ea3f6cff8fac7dac0dbbc7fa
