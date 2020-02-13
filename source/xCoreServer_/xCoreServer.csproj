@@ -63,8 +63,12 @@
     <Compile Include="main\PlayerStuff\Money\PlayerMoneyHolder.cs" />
     <Compile Include="main\Mysql\MYSQL.cs" />
     <Compile Include="main\ServerSide\Group\Group.cs" />
+    <Compile Include="main\ServerSide\Items\Item.cs" />
+    <Compile Include="main\ServerSide\Items\ItemHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="main\PlayerStuff\Inventory\events\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

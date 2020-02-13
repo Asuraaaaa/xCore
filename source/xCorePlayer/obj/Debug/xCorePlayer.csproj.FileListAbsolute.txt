@@ -1,0 +1,6 @@
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCoreMaster\xCorePlayer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\xCoreMaster\xCorePlayer.net.pdb
+D:\PrisonFivem\cfxResource\resources\[xCore]\source\xCorePlayer\obj\Debug\xCorePlayer.csprojAssemblyReference.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\source\xCorePlayer\obj\Debug\xCorePlayer.csproj.CoreCompileInputs.cache
+D:\PrisonFivem\cfxResource\resources\[xCore]\source\xCorePlayer\obj\Debug\xCorePlayer.net.dll
+D:\PrisonFivem\cfxResource\resources\[xCore]\source\xCorePlayer\obj\Debug\xCorePlayer.net.pdb

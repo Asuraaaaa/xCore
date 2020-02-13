@@ -43,15 +43,15 @@ namespace xCoreServer.main.events
             {
                 List<string> gp = group.playerGroups();
                 StringBuilder sb = new StringBuilder();
-
-                for (int i = 0; i < gp.Count; i++)
-                    sb.Append($"('{licenseIdentifier}', '{gp[i]}'),");
-
-
-                MYSQL.execute($"DELETE FROM `groupusers` WHERE steamid = '{licenseIdentifier}';" +
-                              $"INSERT INTO `groupusers` (`steamid`, `group`) VALUES {sb.ToString().Remove(sb.Length - 1)}");
+                if(gp.Count != 0)
+                {
+                    for (int i = 0; i < gp.Count; i++)
+                        sb.Append($"('{licenseIdentifier}', '{gp[i]}'),");
 
 
+                    MYSQL.execute($"DELETE FROM `groupusers` WHERE steamid = '{licenseIdentifier}';" +
+                                  $"INSERT INTO `groupusers` (`steamid`, `group`) VALUES {sb.ToString().Remove(sb.Length - 1)}");
+                }
                 PlayerGroupHolder.removePlayerFromGroupList(player);
             }
             //=====================

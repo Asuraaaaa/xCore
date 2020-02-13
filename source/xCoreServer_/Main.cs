@@ -15,6 +15,7 @@ namespace xCoreServer
         {
             if(resource == "mysql-async")
             {
+                Debug.WriteLine("Creating tables maybe ?");
                 MYSQL.CreateTablesForJobs();
             }
         }

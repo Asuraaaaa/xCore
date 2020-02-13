@@ -8,8 +8,7 @@ namespace xCoreClient.Main.events.def
         [EventHandler("playerSpawned")]
         public static void playerSpawned(dynamic SpawnInfo)
         {        
-            TriggerServerEvent("xCore:server:loadPlayerJob",   ID.playerID());
-            TriggerServerEvent("xCore:server:loadPlayerMoney", ID.playerID());
+
         }
     }
 }

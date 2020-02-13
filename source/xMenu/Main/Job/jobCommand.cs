@@ -1,7 +1,6 @@
 ﻿using CitizenFX.Core;
 using CitizenFX.Core.UI;
 using System;
-using System.Threading.Tasks;
 using xCoreClient.main.Player;
 using xCoreClient.Main.Player.money;
 

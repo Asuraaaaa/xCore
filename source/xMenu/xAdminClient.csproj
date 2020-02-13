@@ -43,9 +43,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="xCoreClient.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="xCorePlayer.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\xCoreMaster\xCoreClient.net.dll</HintPath>
+      <HintPath>..\..\xCoreMaster\xCorePlayer.net.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

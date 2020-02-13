@@ -10,7 +10,7 @@ namespace xCoreServer.main.Job.eventsJob
        public void setJob(int source,string jobName,string grade)
        {
             PlayerJob job = PlayerJobHolder.getPlayerJob(source);
-            job.setPlayerJob(source, jobName, grade);
+            job.setPlayerJob(jobName, grade);
        }
 
         [EventHandler("xCore:Server:getJob")]

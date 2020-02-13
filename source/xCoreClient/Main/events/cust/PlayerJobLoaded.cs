@@ -6,7 +6,7 @@ namespace xCoreClient.events
         [EventHandler("xCore:client:LoadJob")]
         public void playerJobLoaded(string name,string grade)
         {
-            Debug.WriteLine($"Načetl jsem tě! Prace: {name}:{grade}");
+            Debug.WriteLine($"Nacetl jsem te! Prace: {name}:{grade}");
         }
     }
 }

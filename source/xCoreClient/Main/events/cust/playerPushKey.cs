@@ -7,7 +7,7 @@ namespace xCoreClient.main.events
         [EventHandler("xCore:client:keyEvent")]
         public static void playerKeyEvent(int key)
         {
-            Debug.WriteLine("Klíč: " + key);
+            Debug.WriteLine("Klic: " + key);
         }
     }
 }
