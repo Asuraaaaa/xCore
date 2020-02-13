@@ -5,10 +5,84 @@ xCore is simple FiveM library made for RolePLay servers. but... can be used anyw
 - [ ] Inventory system
 - [ ] Notifications
 - [ ] Property system
-- [ ] Sound system
+- [x] Sound system
 - [x] Group system
 - [x] Job system
 - [x] Money system
+
+### SoundSystem functions
+
+Class name: **_PlayerSound_**
+
+**1. Functions (client side)**
+------------
+   - PLayUrl(name, url, volume)
+     Will play sound from url
+      
+   - PLayUrl(name, url, volume, x,  y, z)
+     Will play sound from url at x,y,z location 
+     
+   - PLay(name, url, volume)
+     Will play sound that is defined in html/scripts/config.js
+      
+   - PLay(name, url, volume, x,  y, z)
+     Will play sound that is defined in html/scripts/config.js at x,y,z location      
+
+   - Position(name, x, y, z)
+     Will update location of sound
+     
+   - Stop(name)
+     Will stop completly sound
+     
+   - Pause(name)
+     Will pause sound
+     
+   - Resume(name)
+     Will resume sound       
+ 
+------------
+
+ **Example client**       
+ 
+```C#
+int npc_seller = 0;
+[Command("music")]
+void playMusic()
+{
+     Vector3 pos = Game.Player.Character.Position;
+     PlayerSound.Play("clap", 0.5f, pos.X, pos.Y, pos.Z);
+     
+     Vector3 seller = Game.Player.Character.Position;
+     uint hash = (uint)API.GetHashKey("s_m_m_hairdress_01");
+     while (!API.HasModelLoaded(hash))
+     {
+          API.RequestModel(hash);
+          await Delay(200);
+     }
+     npc_seller = API.CreatePed(2, hash, seller.X, seller.Y, seller.Z, 0f, false, true);     
+}
+
+[Tick]
+async Task followSound()
+{
+     await Delay(33);
+     Vector3 pos = API.GetEntityCoords(npc_seller, true);
+     PlayerSound.Position("clap", pos.X, pos.Y, pos.Z);
+}
+
+[Command("custommusic")]
+void customMusic()
+{
+     Vector3 pos = Game.Player.Character.Position;
+     PlayerSound.PLayUrl("custom", "http://relisoft.cz/assets/gta.mp3", 0.5f);
+}
+
+[Command("stopsound")]
+void stopSound()
+{
+     PlayerSound.Stop("custom");
+}
+``` 
 
 ### GroupSystem functions and events
 
