@@ -5,10 +5,12 @@ namespace xCoreClient.Main.events.def
 {
     class playerSpawn : BaseScript
     {
+        /*
         [EventHandler("playerSpawned")]
         public static void playerSpawned(dynamic SpawnInfo)
         {        
 
         }
+        */
     }
 }

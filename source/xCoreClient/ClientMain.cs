@@ -39,7 +39,7 @@ namespace xCoreClient
             if(npc_seller != 0)
             {
                 Vector3 pos = API.GetEntityCoords(npc_seller, true);
-                PlayerSound.Position("clap", pos.X, pos.Y, pos.Z);
+                PlayerSound.Position("clap", pos);
             }
         }
 
@@ -48,7 +48,7 @@ namespace xCoreClient
         {
             Vector3 pos = Game.Player.Character.Position;
 
-            PlayerSound.Play("test", 1f, pos.X, pos.Y, pos.Z);
+            PlayerSound.Play("test", 1f, pos);
         }
 
         [Command("soundtwo")]
@@ -56,7 +56,7 @@ namespace xCoreClient
         {
             Vector3 pos = Game.Player.Character.Position;
 
-            PlayerSound.Play("clap", 0.5f, pos.X, pos.Y, pos.Z);
+            PlayerSound.Play("clap", 0.5f, pos);
         }
 
         [Command("sound")]

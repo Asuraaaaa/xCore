@@ -19,16 +19,16 @@ Class name: **_PlayerSound_**
    - PLayUrl(name, url, volume)
      Will play sound from url
       
-   - PLayUrl(name, url, volume, x,  y, z)
+   - PLayUrl(name, url, volume, Vector3 vec)
      Will play sound from url at x,y,z location 
      
    - PLay(name, url, volume)
      Will play sound that is defined in html/scripts/config.js
       
-   - PLay(name, url, volume, x,  y, z)
+   - PLay(name, url, volume, Vector3 vec)
      Will play sound that is defined in html/scripts/config.js at x,y,z location      
 
-   - Position(name, x, y, z)
+   - Position(name, Vector3 vec)
      Will update location of sound
      
    - Stop(name)

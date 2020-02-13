@@ -21,16 +21,31 @@ namespace xCoreClient.Main.Player.SoundSystem
             });
             API.SendNuiMessage(json);
         }
-        public static void PLayUrl(string name_,string url_, float volume_, float x_, float y_, float z_)
+        public static void PLayUrl(string name_,string url_, float volume_, Vector3 pos)
         {
             string json = JsonConvert.SerializeObject(new
             {
                 status = "url",
                 name = name_,
                 url = url_,
-                x = x_,
-                y = y_,
-                z = z_,
+                x = pos.X,
+                y = pos.Y,
+                z = pos.Z,
+                dynamic = true,
+                volume = volume_,
+            });
+            API.SendNuiMessage(json);
+        }
+
+        public static void Play(string name_, float volume_, Vector3 pos)
+        {
+            string json = JsonConvert.SerializeObject(new
+            {
+                status = "play",
+                name = name_,
+                x = pos.X,
+                y = pos.Y,
+                z = pos.Z,
                 dynamic = true,
                 volume = volume_,
             });
@@ -52,30 +67,15 @@ namespace xCoreClient.Main.Player.SoundSystem
             Debug.WriteLine(json);
             API.SendNuiMessage(json);
         }
-        public static void Position(string name_, float x_, float y_, float z_)
+        public static void Position(string name_, Vector3 pos)
         {
             string json = JsonConvert.SerializeObject(new
             {
                 status = "soundPosition",
                 name = name_,
-                x = x_,
-                y = y_,
-                z = z_
-            });
-            API.SendNuiMessage(json);
-        }
-
-        public static void Play(string name_, float volume_, float x_, float y_, float z_)
-        {
-            string json = JsonConvert.SerializeObject(new
-            {
-                status = "play",
-                name = name_,
-                x = x_,
-                y = y_,
-                z = z_,
-                dynamic = true,
-                volume = volume_,
+                x = pos.X,
+                y = pos.Y,
+                z = pos.Z,
             });
             API.SendNuiMessage(json);
         }

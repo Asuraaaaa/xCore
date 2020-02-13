@@ -6,7 +6,7 @@ namespace xCoreClient
 {
     class KeyEvent : BaseScript
     {
-        //[Tick]
+        [Tick]
         public async Task IsAnyControlJustPressed()
         {
             foreach (Control item in Enum.GetValues(typeof(Control)))
@@ -18,15 +18,5 @@ namespace xCoreClient
                 }
             }
         }
-
-        /*
-        [Command("object")]
-        void cmd()
-        {
-            Vector3 vec = Game.Player.Character.Position;
-            int obj = API.CreateObject(API.GetHashKey("prop_mk_boost"), vec.X, vec.Y, vec.Z, false, false, true);
-            
-        }
-        */
     }
 }
