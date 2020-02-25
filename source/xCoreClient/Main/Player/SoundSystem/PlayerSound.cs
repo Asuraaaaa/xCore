@@ -2,7 +2,6 @@
 using CitizenFX.Core;
 using CitizenFX.Core.Native;
 using Newtonsoft.Json;
-using xCorePlayer;
 
 namespace xCoreClient.Main.Player.SoundSystem
 {

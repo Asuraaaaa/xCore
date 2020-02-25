@@ -6,14 +6,8 @@ namespace xCoreClient.Main.Player.teleport
 {
     public class teleport : BaseScript
     {
-        [Command("teleport")]
-        void tele()
-        {
-            teleportPlayer(API.PlayerPedId(), new Vector3(-504,-910,26));
-        }
-
         [EventHandler("xCore:Client:teleport")]
-        public void tele(int entity, Vector3 vec, float heading = -999)
+        public static void tele(int entity, Vector3 vec, float heading = -999)
         {
             teleportPlayer(entity, vec, heading);
         }

@@ -1,76 +1,78 @@
 ﻿using CitizenFX.Core;
-using CitizenFX.Core.Native;
-using Newtonsoft.Json;
-using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using xCoreClient.Main.Player.Group;
+using xCoreClient.Main.Player.job;
+using xCoreClient.Main.Player.money;
 using xCoreClient.Main.Player.SoundSystem;
+using xCoreClient.Main.Player.teleport;
 
 namespace xCoreClient
 {
     class ClientMain : BaseScript
-    {      
+    {
         public ClientMain()
-        {          
-
-        }
-        int npc_seller = 0;
-        public async Task spawnNpcAsync()
         {
-            Vector3 seller = Game.Player.Character.Position;
-            uint hash = (uint)API.GetHashKey("s_m_m_hairdress_01");
-            while (!API.HasModelLoaded(hash))
-            {
-                API.RequestModel(hash);
-                await Delay(200);
-            }
+            //===================================//
+            //            SoundSystem            //
+            //===================================//
+            Exports.Add("Play", new Action<string, float>((name, volume) => {
+                PlayerSound.Play(name, volume);
+            }));
 
-            npc_seller = API.CreatePed(2, hash, seller.X, seller.Y, seller.Z, 0f, false, true);
-        }
+            Exports.Add("PlayPos", new Action<string, float, Vector3>((name, volume, pos) => {
+                PlayerSound.Play(name, volume, pos);
+            }));
 
-        [Command("npcspawn")]
-        void npc()
-        {
-            spawnNpcAsync();
-        }
+            Exports.Add("PlayUrl", new Action<string, string, float>((name, url, volume) => {
+                PlayerSound.PLayUrl(name, url, volume);
+            }));
 
-        [Tick]
-        async Task oko()
-        {
-            await Delay(33);
-            if(npc_seller != 0)
-            {
-                Vector3 pos = API.GetEntityCoords(npc_seller, true);
-                PlayerSound.Position("clap", pos);
-            }
-        }
+            Exports.Add("PlayUrlPos", new Action<string, string, float, Vector3>((name, url, volume, pos) => {
+                PlayerSound.PLayUrl(name, url, volume, pos);
+            }));
 
-        [Command("soundthree")]
-        void tffffest()
-        {
-            Vector3 pos = Game.Player.Character.Position;
+            Exports.Add("Pause", new Action<string>((name) => {
+                PlayerSound.Pause(name);
+            }));
 
-            PlayerSound.Play("test", 1f, pos);
-        }
+            Exports.Add("Stop", new Action<string>((name) => {
+                PlayerSound.Stop(name);
+            }));
 
-        [Command("soundtwo")]
-        void thhhhest()
-        {
-            Vector3 pos = Game.Player.Character.Position;
+            Exports.Add("Resume", new Action<string>((name) => {
+                PlayerSound.Resume(name);
+            }));
 
-            PlayerSound.Play("clap", 0.5f, pos);
-        }
+            Exports.Add("Distance", new Action<string, int>((name, disc) => {
+                PlayerSound.Distance(name, disc);
+            }));
 
-        [Command("sound")]
-        void test(string[] args)
-        {
-            Vector3 pos = Game.Player.Character.Position;
-
-            PlayerSound.PLayUrl("custom", "http://relisoft.cz/assets/gta.mp3", 0.5f);
-        }
-
-        [Command("stopsound")]
-        void asdasd()
-        {
-            PlayerSound.Stop("clap");
+            Exports.Add("Position", new Action<string, Vector3>((name, pos) => {
+                PlayerSound.Position(name, pos);
+            }));
+            //===================================//
+            //            MoneySystem            //
+            //===================================//
+            Exports.Add("getDirtyMoney", new Func<int>(PlayerMoney.getDirtyMoney));
+            Exports.Add("getBankMoney", new Func<int> (PlayerMoney.getBankMoney));
+            Exports.Add("getMoney", new Func<int>     (PlayerMoney.getMoney));
+            //===================================//
+            //             JobSystem             //
+            //===================================//
+            Exports.Add("getJob", new Func<string>  (PlayerJob.getJobName));
+            Exports.Add("getGrade", new Func<string>(PlayerJob.getJobGrade));
+            //===================================//
+            //             GroupList             //
+            //===================================//
+            Exports.Add("isAtGroup",               new Func<string,bool>(PlayerGroup.isAtGroup));
+            Exports.Add("getPlayerGroups", new Func<List<string>>(PlayerGroup.getPlayerGroups));
+            //===================================//
+            //             Teleport              //
+            //===================================//
+            Exports.Add("teleport", new Action<int, Vector3, float> ((entity, vec, heading) => {
+                teleport.tele(entity, vec, heading);
+            }));
         }
     }
 }

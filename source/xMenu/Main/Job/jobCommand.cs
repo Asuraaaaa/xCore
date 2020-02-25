@@ -1,23 +1,27 @@
 ﻿using CitizenFX.Core;
+using CitizenFX.Core.Native;
 using CitizenFX.Core.UI;
 using System;
-using xCoreClient.main.Player;
-using xCoreClient.Main.Player.money;
 
 namespace xMenuClient.Main.Job
 {
     class jobCommand : BaseScript
     {
+        public static int playerID()
+        {
+            return API.GetPlayerServerId(API.NetworkGetEntityOwner(API.PlayerPedId()));
+        }
+
         [Command("addgroup")]
         void addGroup(string[] args)
         {
-            TriggerServerEvent("xCore:Server:addPlayerGroup", ID.playerID(), args[0]);
+            TriggerServerEvent("xCore:Server:addPlayerGroup", playerID(), args[0]);
         }
 
         [Command("removeGroup")]
         void removeGroup(string[] args)
         {
-            TriggerServerEvent("xCore:Server:removePlayerGroup", ID.playerID(), args[0]);
+            TriggerServerEvent("xCore:Server:removePlayerGroup", playerID(), args[0]);
         }
 
         [Command("givemoney")]
@@ -25,7 +29,7 @@ namespace xMenuClient.Main.Job
         {
             int money = 0;
             Int32.TryParse(args[1], out money);
-            TriggerServerEvent("xCore:Server:addMoney", ID.playerID(), args[0], money);
+            TriggerServerEvent("xCore:Server:addMoney", playerID(), args[0], money);
         }
 
         [Command("setmoney")]
@@ -33,17 +37,17 @@ namespace xMenuClient.Main.Job
         {
             int money = 0;
             Int32.TryParse(args[1], out money);
-            TriggerServerEvent("xCore:Server:setMoney", ID.playerID(), args[0], money);
+            TriggerServerEvent("xCore:Server:setMoney", playerID(), args[0], money);
         }
 
         [Command("getmoney")]
         void savemoneyAsync()
         {
-            PlayerMoney money = new PlayerMoney();
+            dynamic list = Exports["xCoreMaster"];
 
-            int money_ = money.getMoney();
-            int bank_  = money.getBankMoney();
-            int dirty_ = money.getDirtyMoney();
+            int money_ = list.getMoney();
+            int bank_  = list.getBankMoney();
+            int dirty_ = list.getDirtyMoney();
 
             Screen.ShowNotification($"Money:      {money_}");
             Screen.ShowNotification($"Bank:       {bank_}");
@@ -53,11 +57,13 @@ namespace xMenuClient.Main.Job
         [Command("getjob")]
         void getjob()
         {
-            TriggerServerEvent("xCore:Server:getJob", ID.playerID(), new Action<dynamic>((value) =>
-            {
-                TriggerEvent("chatMessage", "PRACE VOLE", new[] { 255, 0, 0 }, $"{value[0]}");
-                TriggerEvent("chatMessage", "PRACE VOLE", new[] { 255, 0, 0 }, $"{value[1]}");
-            }));
+            dynamic list = Exports["xCoreMaster"];
+
+            string name =  list.getJob();
+            string grade = list.getGrade();
+
+            TriggerEvent("chatMessage", "PRACE VOLE", new[] { 255, 0, 0 }, $"{name}");
+            TriggerEvent("chatMessage", "PRACE VOLE", new[] { 255, 0, 0 }, $"{grade}");
         }
 
 

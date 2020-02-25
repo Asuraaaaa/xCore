@@ -3,14 +3,10 @@ games { 'gta5' }
 
 client_scripts {
 	"xCore.net.dll",
-	"xCorePlayer.net.dll",
-	"xAdminClient.net.dll",
-	"timers.lua",
 }
 
 server_script {	
     "xCoreServer.net.dll",
-	"xAdminServer.net.dll",
 } 
 
 

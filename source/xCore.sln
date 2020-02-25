@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCoreServer", "xCoreServer_\xCoreServer.csproj", "{01A2F706-8AFF-42F5-BA13-0A89EA92A6A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCore", "xCoreClient\xCore.csproj", "{D798AD9A-13A4-4BF7-99B3-DB63A2174A80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCoreClient", "xCoreClient\xCoreClient.csproj", "{D798AD9A-13A4-4BF7-99B3-DB63A2174A80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xAdminClient", "xMenu\xAdminClient.csproj", "{DC73E084-E543-4BC6-8CC1-934D462C7199}"
 EndProject
@@ -14,8 +14,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xCore", "xCore", "{CBE26A7C-0467-4191-B404-9C7D9B3DBA6A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xAdmin", "xAdmin", "{BCDBBABE-2369-4D97-8E69-83FC689576CA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xCorePlayer", "xCorePlayer\xCorePlayer.csproj", "{9A7C4A47-E81E-4B1B-8DCA-68904ADE12F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +37,6 @@ Global
 		{5B4143C4-DAAB-4278-896F-ED3F7FFD7B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B4143C4-DAAB-4278-896F-ED3F7FFD7B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B4143C4-DAAB-4278-896F-ED3F7FFD7B1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A7C4A47-E81E-4B1B-8DCA-68904ADE12F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A7C4A47-E81E-4B1B-8DCA-68904ADE12F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A7C4A47-E81E-4B1B-8DCA-68904ADE12F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A7C4A47-E81E-4B1B-8DCA-68904ADE12F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,7 +46,6 @@ Global
 		{D798AD9A-13A4-4BF7-99B3-DB63A2174A80} = {CBE26A7C-0467-4191-B404-9C7D9B3DBA6A}
 		{DC73E084-E543-4BC6-8CC1-934D462C7199} = {BCDBBABE-2369-4D97-8E69-83FC689576CA}
 		{5B4143C4-DAAB-4278-896F-ED3F7FFD7B1D} = {BCDBBABE-2369-4D97-8E69-83FC689576CA}
-		{9A7C4A47-E81E-4B1B-8DCA-68904ADE12F1} = {CBE26A7C-0467-4191-B404-9C7D9B3DBA6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E7452B5-47C8-48CB-AF99-B0BFC102DCED}

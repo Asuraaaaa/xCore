@@ -45,6 +45,15 @@ $(function(){
 			}
 		}
 		
+		if (item.status === "distance") 
+		{
+			var sound = soundList[item.name];		
+			if(sound != null)
+			{
+				sound.setDistance(item.distance);
+			}
+		}
+		
 		if (item.status === "play") 
 		{
 			var sound = soundList[item.name];		

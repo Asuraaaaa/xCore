@@ -32,7 +32,7 @@ class SoundPlayer
   
 	create()
 	{
-		$("body").append("<audio id='"+ this.div_id +"' src='"+this.getUrlSound()+"'></audio>");		
+		$("body").append("<audio id='"+ this.div_id +"' src='"+this.getUrlSound()+"' onended='$(this).remove();'></audio>");		
 	}
   
 	updateVolume(dd,maxd) 

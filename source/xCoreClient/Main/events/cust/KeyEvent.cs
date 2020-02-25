@@ -6,7 +6,7 @@ namespace xCoreClient
 {
     class KeyEvent : BaseScript
     {
-        [Tick]
+        //[Tick]
         public async Task IsAnyControlJustPressed()
         {
             foreach (Control item in Enum.GetValues(typeof(Control)))
