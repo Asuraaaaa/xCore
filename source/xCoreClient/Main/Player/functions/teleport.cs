@@ -22,6 +22,9 @@ namespace xCoreClient.Main.Player.teleport
                     await Delay(50);
                 }
                 API.SetEntityCoords(entity, vec.X, vec.Y, vec.Z, false, false, false, false);
+
+
+
                 if (heading == -999) API.SetEntityHeading(entity, API.GetEntityHeading(entity));
                 else API.SetEntityHeading(entity, heading);
             }

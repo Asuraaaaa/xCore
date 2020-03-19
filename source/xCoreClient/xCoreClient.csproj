@@ -65,6 +65,9 @@
     <Compile Include="Main\Player\functions\teleport.cs" />
     <Compile Include="Main\Player\Group\PlayerGroup.cs" />
     <Compile Include="Main\Player\job\PlayerJob.cs" />
+    <Compile Include="Main\Player\Markers\Draw\MarkInit.cs" />
+    <Compile Include="Main\Player\Markers\MarkClass.cs" />
+    <Compile Include="Main\Player\Markers\MarkerHolder.cs" />
     <Compile Include="Main\Player\money\PlayerMoney.cs" />
     <Compile Include="Main\Player\SoundSystem\PlayerSound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

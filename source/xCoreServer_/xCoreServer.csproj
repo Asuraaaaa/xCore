@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CitizenFX.Core">
-      <HintPath>D:\FiveM_server\citizen\clr2\lib\mono\4.5\CitizenFX.Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\citizen\clr2\lib\mono\4.5\CitizenFX.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

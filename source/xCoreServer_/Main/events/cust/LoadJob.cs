@@ -10,8 +10,8 @@ namespace xCoreServer.JobInit
         public static void loadPlayerJob(int source)
         {
             Player player = new PlayerList()[source];
-            string job = "Bez práce";
-            string grade = "ahjo";
+            string job = "unemployed";
+            string grade = "unemployed";
 
             var licenseIdentifier = player.Identifiers["steam"];
             MYSQL.FetchAll($"SELECT * FROM playerjob WHERE steamid = '{licenseIdentifier}'", null, (List<dynamic> list) =>
